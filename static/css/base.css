@@ -1,0 +1,134 @@
+/* 네비게이션 바 스타일 */
+.navcolor {
+    background-color: rgb(141, 194, 228);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 다른 요소 위에 나타나도록 설정 */
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    background-color: #a5a5a5;
+    height: 100%;
+    position: fixed;
+    top: 50px;
+    width: 70px; /* 사이드바의 너비를 조정 */
+    z-index: 100; /* 네비게이션 바 아래에 위치하도록 설정 */
+}
+
+/* 사이드바 내비게이션 링크 스타일 */
+.sidebar .nav-link {
+    font-size: 14px; /* 폰트 크기 조정 */
+    padding: 10px 5px; /* 패딩 조정 */
+}
+
+/* 활성화된 내비게이션 링크 스타일 */
+.sidebar .nav-link.active {
+    background-color: #007bff; /* 배경 색상 */
+    color: #ffffff; /* 텍스트 색상 */
+}
+
+/* SVG 아이콘 크기 조정 */
+.sidebar .nav-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* 텍스트 크기와 간격 조정 */
+.sidebar .nav-link span {
+    display: block;
+    font-size: 12px; /* 폰트 크기 조정 */
+    margin-top: 5px; /* 텍스트와 아이콘 간격 조정 */
+}
+
+/* 메인 콘텐츠 영역 스타일 */
+.main {
+    margin-top : 50px;
+    width : 100%;
+    height : 100%;
+    margin-left : 70px;
+}
+.left {
+    width : 40%;
+    height : 100%;
+    float: left;
+    padding : 20px;
+}
+.right {
+    width : 60%;
+    height : 100%;
+    float: right;
+    padding : 50px;
+}
+
+/* 테이블 스타일 */
+.infratable {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.infratable th, .infratable td {
+    border: 1px solid #ffffff; /* 테이블 셀 테두리 스타일 지정 */
+    font-family: Arial, sans-serif;
+    font-size: 12px; /* 폰트 사이즈 조정 */
+    padding: 10px;
+    text-align: center;
+}
+
+.infratable .st1 {
+    background-color: #ecf4ff; /* 특정 셀 배경색 설정 */
+    vertical-align: middle; /* 셀의 수직 정렬 방식 지정 */
+}
+
+.tableheight {
+    height: 40px;
+}
+
+/* 폼 스타일 */
+.custom-form {
+    max-width: 500px; /* 폼 최대 너비 설정 */
+    margin: 0 auto; /* 폼을 가운데 정렬 */
+    padding: 20px; /* 폼 주변 여백 추가 */
+}
+
+.custom-form .form-group {
+    margin-bottom: 20px; /* 폼 그룹 간격 설정 */
+}
+
+.custom-form .col-form-label {
+    white-space: nowrap; /* 레이블 텍스트 줄 바꿈 방지 */
+}
+
+.custom-form label {
+    margin-bottom: 10px; /* 레이블 하단 여백 조정 */
+}
+
+/* 헤딩 스타일 */
+h3 {
+    margin-bottom: 10px; /* 헤딩 하단 여백 조정 */
+}
+
+/* 푸터 스타일 */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center; /* 푸터 텍스트 가운데 정렬 */
+    position: relative;
+}

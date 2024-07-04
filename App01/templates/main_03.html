@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+.backgroundstyle {
+      background-image: url('{% static "images/MainHome.jpg" %}');
+      height: 1000px;
+      width: 110%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+</style>
+    <div class="main">
+        <div class="backgroundstyle">
+            <div class="container text-center" style="margin-left: -10%;"> <!-- Adjust margin-left as needed -->
+                <h1 class="text-white"><b>최적의 이사를 위한 주거지 추천 프로그램</b></h1>
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+    {% endblock %}
+</body>
+</html>

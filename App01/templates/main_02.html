@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <title>Django</title>
+</head>
+<body>
+    <nav class="navbar navcolor navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+          
+        </div>
+    </nav>
+    <div class="sidebar d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;">
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+          <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+            <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+            <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+            <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="left">
+        <br>
+        <h3>&nbsp; 인프라 갯수 조정</h3>
+        <hr width="70%">
+          <ul>
+            <li><span>병의원</span><span class="line">______</span><span class="value">개</span></li>
+              <li><span>지하철</span><span class="line">______</span><span class="value">개</span></li>
+              <li><span>버스정류장</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>구청</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>가격</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>주민센터</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>공원</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>초중고</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>미세먼지</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>편의점</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>경로당</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>백화점</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>도서관</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>유치원</span><span class="line"></span><span class="value">개</span></li>
+              <li><span>마트</span><span class="line"></span><span class="value">개</span></li>
+          </ul>
+        
+          <button><a href="#">조회</a></button><br/><br/><br/><br/><br/>
+    
+        <div>
+          <hr width="70%">
+          <p>30대가 살기에 적합합니다.</p>
+      </div>
+      </div>
+      <div class="right">
+        <img src="../../static/images/busan.jpg " height="100%" width="100%">
+      <div>
+  </div>
+    <!--기본 템플릿 안에 삽입될 내용   start -->
+    {% block content %}
+    {% endblock %}
+
+    <!--자바스크립트  start -->
+    {% block script %}
+    {% endblock %}
+    
+</body>
+</html>

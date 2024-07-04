@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br><br>
+<div class="container mt-5 text-center">
+    <h3 class="mb-4"><b>회원가입</b></h3>
+    <p>회원 정보를 입력하세요</p>
+    <br><hr><br>
+    <form method="post" class="custom-form">
+        {% csrf_token %}
+        
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <strong>입력이 잘못되었습니다.</strong> 아래 내용을 확인해 주세요.
+                <ul>
+                    {% for field, error_list in form.errors.items %}
+                        {% for error in error_list %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="form-group row mb-5"> <!-- Username row -->
+            <label for="username" class="col-sm-3 col-form-label text-end">ID :</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" id="username" name="username"
+                       value="{{ username }}">
+            </div>
+        </div>
+
+        <div class="form-group row mb-5"> <!-- Password row -->
+            <label for="password1" class="col-sm-3 col-form-label text-end">Password :</label>
+            <div class="col-sm-7">
+                <input type="password" class="form-control" id="password1" name="password1" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-5"> <!-- Password confirmation row -->
+            <label for="password2" class="col-sm-3 col-form-label text-end">Password Check: </label>
+            <div class="col-sm-7">
+                <input type="password" class="form-control" id="password2" name="password2" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-5"> <!-- Email row -->
+            <label for="email" class="col-sm-3 col-form-label text-end">E-mail :</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" id="email" name="email"
+                       value="{{ email }}">
+            </div>
+        </div><br>
+        
+        <hr><br><br>
+        <div class="form-group row"> <!-- Submit button row -->
+            <div class="col-sm-8 offset-sm-2">
+                <button type="submit" class="btn btn-outline-dark">회원가입하기</button>
+            </div>
+        </div>
+    </form>
+
+    {% comment %} 이메일 인증 버튼 {% endcomment %}
+    <form method="post" action="{% url 'account_activation_sent' %}">
+        {% csrf_token %}
+        <input type="hidden" id="username" name="username" value="{{ username }}">
+        <input type="hidden" id="email" name="email" value="{{ email }}">
+        <button type="submit" class="btn btn-outline-dark">이메일 인증 보내기</button>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Django</title>
+    <meta charset="UTF-8">
+    <title>구별 인프라 현황 아이콘</title>
+
+<body>
+    <nav class="navbar navcolor navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+          
+        </div>
+    </nav>
+    <div class="sidebar d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;">
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+          <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+            <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+            <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+            <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="icons-container">
+        <div class="icon">
+            <img src="{% static 'icons/hospital.svg' %}" alt="병의원">
+            <p>병의원</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/train-front.svg' %}" alt="지하철">
+            <p>지하철</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/currency-exchange.svg' %}" alt="가격">
+            <p>가격</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/bus-front.svg' %}" alt="버스정류장">
+            <p>버스정류장</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/cloud.svg' %}" alt="미세먼지">
+            <p>미세먼지</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/shop.svg' %}" alt="편의점">
+            <p>편의점</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/handbag.svg' %}" alt="백화점">
+            <p>백화점</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/person-walking.svg' %}" alt="공원">
+            <p>공원</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/bank.svg' %}" alt="주민센터">
+            <p>주민센터</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/building-check.svg' %}" alt="구청">
+            <p>구청</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/cart3.svg' %}" alt="마트">
+            <p>마트</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/person-arms-up.svg' %}" alt="유치원">
+            <p>유치원</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/library.png' %}" alt="도서관">
+            <p>도서관</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/cash-coin.svg' %}" alt="은행">
+            <p>은행</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/elementary_school.png' %}" alt="초중고">
+            <p>초중고</p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'icons/bus_station.png' %}" alt="경로당">
+            <p>경로당</p>
+        </div>
+
+        <div class='tableauPlaceholder' id='viz1719468279348' style='position: relative'><noscript><a href='#'><img alt='종합요약 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;22&#47;22_17183498373680&#47;sheet6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='22_17183498373680&#47;sheet6' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;22&#47;22_17183498373680&#47;sheet6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1719468279348');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1177px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+</body>
+</head>
+</html>

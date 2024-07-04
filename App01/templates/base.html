@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'jquery-3.7.1.min.js' %}"></script>
+    <title>Django</title>
+</head>
+<body>
+    <nav class="navbar navcolor navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+          <a href="{% url 'main03' %}"><img src="{% static 'images/logo.png' %}" alt="logo" height="50"></a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'main03' %}">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'signup' %}">회원가입</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="sidebar d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4.5rem;">
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+          <a href="{% url 'main03' %}" class="nav-link {% if request.path == '/main03/' %}active{% endif %}" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+            <img src="{% static 'images/menu1.png' %}" width="40" aria-label="HOME">
+            <span class="ms-1"></span>
+          </a>
+        </li> 
+        <li class="nav-item">
+          <a href="{% url 'recommend_district' %}" class="nav-link {% if request.path == '/recommendation/' %}active{% endif %}" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="내 Gu조회" data-bs-original-title="내 Gu조회">
+            <img src="{% static 'images/menu2.png' %}" width="24" aria-label="내 Gu조회">
+            <span class="ms-1"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'write_form' %}" class="nav-link {% if request.path == '/write_form/' %}active{% endif %}" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="게시판" data-bs-original-title="게시판">
+            <img src="{% static 'images/menu3.png' %}" width="40" aria-label="게시판">
+            <span class="ms-1"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--기본 템플릿 안에 삽입될 내용   start -->
+    {% block content %}
+    
+    {% endblock %}
+
+    <!--자바스크립트  start -->
+    {% block script %}
+    {% endblock %}
+    
+</body>
+</html>

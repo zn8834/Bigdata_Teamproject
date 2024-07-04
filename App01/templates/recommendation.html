@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main">
+    <div class="left">
+      <br>
+      <h3 class="fw-bold">&nbsp; 내-PIC</h3>
+      <hr width="200px">
+      <p class="fs-6 mx-3">지역(구)내에 인프라 개수를 입력해주세요</p>
+      <div class="">
+      </div>
+        <table class="infratable">
+          <tr>
+            <form method="post">
+            {% csrf_token %}
+            <td class="st1">
+              <label for="price">평당가</label>
+              <div class="tableheight">
+                <img src="{% static 'images/price.png' %}" class="mt-1" width="40px">
+              </div>
+              <input type="text"  size="5" class="mt-2" placeholder="만 단위 가격" id="price" name="price" required>
+            </td>
+            <td class="st1">
+              <label for="hospital">병원</label>
+              <div class="tableheight">
+                <img src="{% static 'images/hospital.png' %}" width="50px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="hospital" name="hospital" required>
+            </td>
+            <td class="st1">
+              <label for="bus">버스정류장</label>
+              <div class="tableheight">
+                <img src="{% static 'images/busstop.png' %}" width="40px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="bus" name="bus" required>
+            </td>
+            <td class="st1">
+              <label for="convenience">편의점</label>
+              <div class="tableheight">
+                <img src="{% static 'images/convenience.png' %}" width="35px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="convenience" name="convenience" required>
+            </td>
+            <td class="st1">
+              <label for="subway">지하철역</label>
+              <div class="tableheight">
+                <img src="{% static 'images/subway.png' %}" width="40px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="subway" name="subway" required>
+            </td>
+            <td class="st1">
+              <label for="department">백화점</label>
+              <div class="tableheight">
+                <img src="{% static 'images/department.png' %}" width="35px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="department" name="department" required>
+            </td>
+            <td class="st1">
+              <label for="office">관공서</label>
+              <div class="tableheight">
+                <img src="{% static 'images/center.png' %}" width="45px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="office" name="office" required> 
+            </td>
+          </tr>
+          <tr>
+            <td class="st1">
+              <label for="mart">마트</label>
+              <div class="tableheight">
+                <img src="{% static 'images/mart.png' %}" width="40px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="mart" name="mart" required>
+            </td>
+            <td class="st1">
+              <label for="kindergarten">유치원</label>
+              <div class="tableheight">
+                <img src="{% static 'images/kindergarten.png' %}" width="35px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="kindergarten" name="kindergarten" required>
+            </td>
+            <td class="st1">
+              <label for="library">도서관</label>
+              <div class="tableheight">
+                <img src="{% static 'images/library.png' %}" width="35px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="library" name="library" required>
+            </td>
+            <td class="st1">
+              <label for="park">공원</label>
+              <div class="tableheight">
+                <img src="{% static 'images/park.png' %}" width="40px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="park" name="park" required>
+            </td>
+            <td class="st1">
+              <label for="school">학교</label>
+              <div class="tableheight">
+                <img src="{% static 'images/school.png' %}" width="40px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="school" name="school" required>
+            </td>
+            <td class="st1">
+              <label for="bank">은행</label>
+              <div class="tableheight">
+                <img src="{% static 'images/bank.png' %}" width="50px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="bank" name="bank" required>
+            </td>
+            <td class="st1">
+              <label for="senior">경로당</label>
+              <div class="tableheight">
+                <img src="{% static 'images/senior.png' %}" width="30px">
+              </div>
+              <input type="text" size="5" class="mt-2" placeholder="개수" id="senior" name="senior" required>
+            </td>
+          </tr>
+        </table>
+      </br></br>
+        <button type="submit">구 추천 받기</button>
+      </form>
+      <hr/>
+      {% if recommended_gu %}
+      <p class="fw-bold fs-4 "><img src="{% static 'images/logo.png' %}" width="150px">의 PIC</p>
+      <h2>{{ recommended_gu }}를 추천합니다.!</h2>
+      {% endif %}
+    </div>
+    <div class="right">
+      <div class='tableauPlaceholder' id='viz1719984025707' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='부산(구) 데이터 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_3&#47;_30_17193776808990&#47;sheet0&#47;1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='path' value='views&#47;_30_17193776808990&#47;sheet0?:language=en-US&amp;:embed=true&amp;:sid=' /> 
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_3&#47;_30_17193776808990&#47;sheet0&#47;1.png' /> \
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' /><param name='language' value='en-US' />
+        </object>
+    </div>                
+    <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1719984025707');                   
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
+    <div>
+</div>
+{% endblock %}

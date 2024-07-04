@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Main 사이트{% endblock %}</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            background-color: #f4f4f4;
+        }
+        .back_sidebar {
+            width: 80px;
+            background-color: #adacac;
+            padding: 10px;
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar {
+            width: 80px;
+            background-color: #e7e7e7;
+            padding: 0px;
+            height: 30vh;
+            position: fixed;
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .content-box {
+            margin-left: 100px;
+            padding: 00px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-box {
+            background-color: #00498c;
+            padding: 20px;
+            color: white;
+        }
+        .top-box h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .text-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .text-content li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+        .text-content li span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .text-content li .line {
+            display: inline-block;
+            width: 150px; /* Adjust the width of the line as needed */
+            border-bottom: 1px solid #000;
+            margin-left: 10px; /* Space between text and line */
+            vertical-align: middle;
+        }
+        .image-content {
+            flex-shrink: 0;
+            flex: 1;
+            max-width: 800px;
+        }
+        .image-content img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back_sidebar">
+        <div class="sidebar">
+        <a href="#">책갈피 1</a>
+        <a href="#">책갈피 2</a>
+        <a href="#">책갈피 3</a>
+        <a href="main.html">메인으로 이동</a>
+        </div>
+    </div>
+    
+    
+    <div class="content-box">
+        <div class="top-box">
+           
+        </div>
+        
+        <div class="flex-container">
+            <div class="text-content">
+                <h1>인프라 갯수 조정</h1>
+                <hr align="left" style="border: solid 1px rgba(80, 127, 182, 0.445); width:90%;">
+                <ul>
+                    <li><span>병의원</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>지하철</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>버스정류장</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>구청</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>가격</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>주민센터</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>공원</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>초중고</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>미세먼지</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>편의점</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>경로당</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>백화점</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>도서관</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>유치원</span><span class="line"></span><span class="value">개</span></li>
+                    <li><span>마트</span><span class="line"></span><span class="value">개</span></li>
+                </ul>
+              
+                <button><a href="#">조회</a></button><br/><br/><br/><br/><br/>
+                <hr align="left" style="border: solid 1px rgba(80, 127, 182, 0.445); width:90%;">
+            </div>
+            <div class="image-content">
+                <img src="{% static 'upload/busan.jpg' %}" alt="Busan">
+            </div>
+        </div>
+        <div>
+            <p>30대가 살기에 적합합니다.</p>
+        </div>
+    </div>
+</body>
+</html>

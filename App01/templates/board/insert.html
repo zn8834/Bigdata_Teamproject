@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-3">
+</br></br></br>
+    <h3>게시판 글 작성</h3>
+    <form action="/insert/" method="post" enctype="multipart/form-data">
+      <div class="mb-3 mt-3">
+        <label for="writer">Writer:</label>
+        <input type="text" class="form-control" id="writer" 
+         name="writer" value="{{user.username}}" readonly>
+      </div>
+      <div class="mb-3">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter title"
+         name="title">
+      </div>
+      <div class="mb-3">
+        <label for="content">Content:</label>
+        <textarea  class="form-control" rows="5" id="content" name="content"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="file">File:</label>
+        <input type="file" class="form-control" id="file" placeholder="Enter file"
+         name="file">
+      </div>
+      <button type="submit" class="btn btn-primary">글쓰기</button>
+    </form>
+</div>
+{% endblock %}
